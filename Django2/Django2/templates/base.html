@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        header{
+        background: #f1f1f1;
+        padding: 8px 0;}
+
+        p{font-size: 26px;}
+
+        img{
+        width: 500px;
+        }
+
+        li{
+        list-style-type: none;
+        font-size: 26px;}
+
+        a img:hover{
+        width: 110px;
+        hight: 110px;
+        }
+        .header wrap{width: 100%}
+        .logo{
+        float:left;}
+
+        .contacts {
+        margin-left: 600px;
+        padding-left: 150px;
+        padding-top: 40px;
+        }
+
+        .place{
+        margin-left: 1100px;
+        margin-top: -240px;
+        padding-left: 100px;
+        }
+
+        .icons {
+        width: 70px;
+        hight: 70px;
+        vertical-align: middle;}
+
+        .bold {font-weight: bold;
+               font-size: 30px;
+               font-style: normal;
+               }
+
+        .maplink{
+        color: #787878;
+        font-size: 18px;}
+
+        a[href="https://yandex.by/maps/157/minsk/house/Zk4YcA9jTUYBQFtpfXR0dH1gbQ==/?ll=27.683436%2C53.855139&z=17.05"]:hover {font-size: 22px;
+        color: #2c2d2e;
+        }
+
+        .menu_wrap{background:#006caa;}
+
+        .menu_inner{float: left;
+        padding-left:61px;
+        padding-right:61.5px;
+        padding-top:20px;
+        padding-bottom:20px;
+        font-size: 30px;
+        font-weight: bold;
+        background:#006caa;}
+
+        div a {color: black;
+        font-size:30px;
+        text-decoration: none;
+        font-weight: bold;}
+
+        div a:hover{color:white;}
+    </style>
+
+</head>
+<body>
+
+    <header>
+<div class="header wrap">
+            <div class = 'logo'><img src="img/logo.png", alt="logo"></div>
+            <div class = 'contacts'><ul><li>Наши телефоны</li><br>
+                                       <li class="bold">+375-29-173-70-70</li>
+                                        <li class="bold">+375-29-174-70-70</li><br>
+                                         <li> Электронная почта </li><br>
+                                          <li class="bold">nasosbeton@mail.ru</li></ul></div>
+            <div class="place"><p>Расположены по адресу:</p><address class = 'bold'>г.Минск, пр.Партизанский, 168</address>
+                <a class='maplink' href="https://yandex.by/maps/157/minsk/house/Zk4YcA9jTUYBQFtpfXR0dH1gbQ==/?ll=27.683436%2C53.855139&z=17.05"><span>Показать на карте</span></a><br><br>
+                <p>Мы в социальных сетях:<br>
+                <a href="https://www.youtube.com/@user-wp3bw9jc1y/featured", target="blank"><img class='icons'src="img/icon_Utube.png", alt="YouTube icon"></a>
+                <a href="https://instagram.com/nasosbeton?igshid=ZDdkNTZiNTM=", target="blank"><img class='icons' src="img/icon__insta.jpg", alt="instagram icon"></a></p>
+            </div>
+</div>
+        <div class="menu_wrap">
+            <div class="menu_inner"><a href="{% url 'main' %}">Главная</a> </div>
+            <div class="menu_inner"><a href="{% url 'about' %}">О компании</a></div>
+            <div class="menu_inner"><a href="{% url 'services' %}">Услуги</a></div>
+            <div class="menu_inner"><a href="{% url 'ourworks' %}">Наши работы</a> </div>
+            <div class="menu_inner">Отзывы</div>
+            <div class="menu_inner">Полезные статьи</div>
+            <div class="menu_inner"><a href="{% url 'contacts' %}">Контакты</a> </div>
+        </div>
+    </header>
+
+{% block page_content %}
+{% endblock %}
+<footer><div>Подвал</div></footer>
+    </body>
+</html>
